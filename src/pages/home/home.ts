@@ -10,13 +10,11 @@ export class HomePage {
 
   my_url: any;
   constructor(public navCtrl: NavController,private sanitize: DomSanitizer) {
-
   }
-  
 
   urlpaste(){
     this.my_url = "http://myopensoft.ddns.net:8035/myquest/";
-    return this.sanitize.bypassSecurityTrustResourceUrl(this.my_url);
+    return this.sanitize.bypassSecurityTrustHtml(this.my_url);
   }
 
 }
